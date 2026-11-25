@@ -55,8 +55,9 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;paddin
 .chip.c1{top:20%;left:27%;rotate:-7deg}.chip.c2{top:5%;left:50%;rotate:3deg}.chip.c3{top:78%;left:66%;rotate:-5deg}
 #heroT{position:relative}
 #fig{position:relative;z-index:2;margin-top:clamp(-40px,-2.5vw,-10px);width:min(38vw,470px);will-change:transform}
-#fig img{display:block;width:100%;height:auto;animation:boil .5s steps(1) infinite;transform-origin:50% 100%}
-@keyframes boil{0%{transform:rotate(0)}33%{transform:rotate(.35deg) translateY(-1px)}66%{transform:rotate(-.3deg)}}
+#fig img{display:block;width:100%;height:auto}#fig .bf{position:absolute;inset:0;opacity:0}
+#fig .b1{animation:bo1 .45s steps(1) infinite}#fig .b2{animation:bo2 .45s steps(1) infinite}
+@keyframes bo1{0%{opacity:0}33%{opacity:1}66%{opacity:0}}@keyframes bo2{0%{opacity:0}66%{opacity:1}}
 .loop{position:absolute;top:8%;width:clamp(180px,24vw,420px);height:auto;z-index:0;overflow:visible}
 .loop.L{left:-9vw}.loop.R{right:-9vw;transform:scaleX(-1)}
 .loop path{fill:none;stroke:var(--p);stroke-width:26;stroke-linecap:round}
@@ -68,8 +69,10 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;paddin
 
 /* band */
 #band{position:relative;margin-top:-6vw;z-index:4;direction:ltr;pointer-events:none;overflow-x:clip}
-#band svg{display:block;width:100%;height:auto;overflow:visible}
-#band text{font:400 96px var(--disp);fill:#fff;letter-spacing:.01em}
+#band{padding:5vw 0}.bandIn{background:var(--p);width:124%;margin-left:-12%;border-radius:999px;transform:rotate(-4deg);will-change:transform}
+.bandTrack{display:flex;width:max-content;animation:mq 26s linear infinite;will-change:transform}
+.bandTrack span{font:400 clamp(46px,6.4vw,104px)/1.25 var(--disp);color:#fff;white-space:nowrap;letter-spacing:.01em}
+@keyframes mq{to{transform:translateX(-50%)}}
 
 /* about */
 #about{position:relative;overflow-x:clip;padding:clamp(40px,8vh,120px) 0 0;background:linear-gradient(var(--bg),var(--bg2))}
@@ -235,7 +238,7 @@ footer .c{text-align:center;direction:rtl}footer .e{text-align:right}
  .chip.c1{left:4%;top:16%}.chip.c2{left:46%;top:-12%}.chip.c3{left:50%;top:92%}
  .loop{width:44vw;top:36%}.loop.L{left:-24vw}.loop.R{right:-24vw}
  .piece{width:17vw;bottom:3%}.piece.a{left:2%}.piece.b{right:2%}
- #band{margin-top:-2vw}#band svg{width:220%;margin-left:-60%}
+ #band{margin-top:-2vw}
  #grid,#tiles{grid-template-columns:1fr}.card .vis{aspect-ratio:.95}#bx{grid-template-columns:1fr;margin-inline:20px}#bx h3{text-align:left}
  .sv:nth-child(odd){margin-left:0}.sv:nth-child(even){margin-right:0}
  #svcLine path{stroke-width:10}.sv h3{background:none}
@@ -243,7 +246,7 @@ footer .c{text-align:center;direction:rtl}footer .e{text-align:right}
  #faq{grid-template-columns:1fr}.faqL{position:static}#cat{width:60%}.q button{white-space:normal;border-radius:28px}
  footer{grid-template-columns:1fr;text-align:center}footer .e,footer .c{text-align:center}footer nav{align-items:center}
 }
-@media(prefers-reduced-motion:reduce){#fig img,.piece .bob{animation:none}}
+@media(prefers-reduced-motion:reduce){#fig .bf{display:none}.piece .bob,.bandTrack{animation:none}}
 </style>
 </head>
 <body>
@@ -268,17 +271,12 @@ footer .c{text-align:center;direction:rtl}footer .e{text-align:right}
     <h1><span class="ln"><span>Page one,</span></span><span class="ln"><span>on purpose</span></span></h1>
     <span class="chip c1">SEO Specialist</span><span class="chip c3">Gamer</span>
   </div>
-  <div id="fig"><img src="mazen.webp" width="560" height="873" fetchpriority="high" alt="مازن محمد قاعد على كرسي، بهودي أسود ونضارة"></div>
+  <div id="fig"><img class="bf b1" src="mazen1.webp" alt="" aria-hidden="true" width="560" height="873"><img class="bf b2" src="mazen2.webp" alt="" aria-hidden="true" width="560" height="873"><img src="mazen0.webp" width="560" height="873" fetchpriority="high" alt="مازن محمد قاعد على كرسي، بهودي أسود ونضارة"></div>
   <div class="piece a" aria-hidden="true"><svg viewBox="0 0 120 170"><g class="bob"><path d="M22 160h76l-8-22H30z" fill="#7b3cff"/><path d="M38 138c6-26 8-44 4-58h36c-4 14-2 32 4 58z" fill="#fff"/><circle cx="60" cy="48" r="26" fill="#7b3cff"/><path d="M34 80h52" /><g fill="none" stroke="#0e0a16" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 160h76l-8-22H30z"/><path d="M38 138c6-26 8-44 4-58h36c-4 14-2 32 4 58"/><circle cx="60" cy="48" r="26"/><path d="M32 80h56"/></g></g></svg></div>
   <div class="piece b" aria-hidden="true"><svg viewBox="0 0 130 180"><g class="bob" style="animation-delay:-.5s"><path d="M24 170h84l-8-22H32z" fill="#0e0a16"/><path d="M40 148c2-30 14-44 30-56-10 2-20 8-30 4-8-4-10-14-2-24l30-34 6-22 14 18c20 14 30 40 30 70 0 18-6 32-12 44z" fill="#7b3cff"/><g fill="none" stroke="#0e0a16" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 170h84l-8-22H32z"/><path d="M40 148c2-30 14-44 30-56-10 2-20 8-30 4-8-4-10-14-2-24l30-34 6-22 14 18c20 14 30 40 30 70 0 18-6 32-12 44"/><circle cx="76" cy="54" r="3.5" fill="#0e0a16"/><path d="M92 40c8 10 12 24 12 40"/></g></g></svg></div>
 </section>
 
-<div id="band" aria-hidden="true">
-  <svg viewBox="0 0 1600 460"><defs><path id="bp" d="M-200,330 Q800,60 1800,330"/><mask id="bm" maskUnits="userSpaceOnUse" x="-400" y="-200" width="2400" height="900"><use href="#bp" id="bmS" fill="none" stroke="#fff" stroke-width="170" stroke-linecap="round" pathLength="1"/></mask></defs>
-    <use href="#bp" id="bS" fill="none" stroke="#7b3cff" stroke-width="170" stroke-linecap="round" pathLength="1"/>
-    <g mask="url(#bm)"><text dominant-baseline="central" dy="6"><textPath id="bt" href="#bp" startOffset="0">RANK IT • WRITE IT • SHIP IT • YOUR MOVE • RANK IT • WRITE IT • SHIP IT • YOUR MOVE • RANK IT • WRITE IT • SHIP IT • YOUR MOVE • RANK IT • WRITE IT • SHIP IT • YOUR MOVE • </textPath></text></g>
-  </svg>
-</div>
+<div id="band" aria-hidden="true"><div class="bandIn"><div class="bandTrack"><span>RANK IT • WRITE IT • SHIP IT • YOUR MOVE •&nbsp;</span><span>RANK IT • WRITE IT • SHIP IT • YOUR MOVE •&nbsp;</span><span>RANK IT • WRITE IT • SHIP IT • YOUR MOVE •&nbsp;</span><span>RANK IT • WRITE IT • SHIP IT • YOUR MOVE •&nbsp;</span></div></div></div>
 
 <section id="about">
   <div id="aboutPin">
@@ -464,35 +462,28 @@ function buildLine(){const list=$('#svcList'),path=$('#svcLine path');const W=li
  d+=` C ${px} ${py+140}, ${W*.5} ${H-60}, ${W*.5} ${H+40}`;path.setAttribute('d',d)}
 buildLine();addEventListener('resize',buildLine);
 
-/* marquee band */
-const bp=$('#bp'),bt=$('#bt');let off=0,phrase=0,bandK=0,vel=1;
-function bandShape(k){const cy=60+k*520,ey=330-k*230;bp.setAttribute('d',`M-200,${ey} Q800,${cy} 1800,${ey}`)}
-let bandOn=true;new IntersectionObserver(e=>{bandOn=e[0].isIntersecting},{rootMargin:'100px'}).observe(document.getElementById('band'));
-function tickBand(){if(!bandOn){requestAnimationFrame(tickBand);return}if(!phrase){try{phrase=bt.getComputedTextLength()/4}catch(e){phrase=1200}}off-=1.6*vel;if(phrase&&off<-phrase)off+=phrase;bt.setAttribute('startOffset',off);requestAnimationFrame(tickBand)}
-if(!RM)requestAnimationFrame(tickBand);
 
 if(hasG&&!RM){
 gsap.registerPlugin(ScrollTrigger);
 if(window.Lenis){lenis=new Lenis({duration:1.15,smoothWheel:true});lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
- lenis.on('scroll',({velocity})=>{vel=1+Math.min(6,Math.abs(velocity)*.12)})}
+ }
 {const nv=$('#nav');const upd=()=>nv.classList.toggle('scrolled',scrollY>60);addEventListener('scroll',upd,{passive:true});upd()}
 $$('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=$(a.getAttribute('href'));if(t){e.preventDefault();lenis?lenis.scrollTo(t,{duration:1.4}):t.scrollIntoView({behavior:'smooth'})}}));
 
 /* initial states */
 gsap.set('#hero h1 .ln span',{yPercent:115});gsap.set('.chip',{scale:0});gsap.set('#fig',{yPercent:30,opacity:0});gsap.set('.piece',{y:120,opacity:0});
 gsap.set('.loop path',{strokeDasharray:1,strokeDashoffset:1});gsap.set('#nav',{y:-80,opacity:0});
-gsap.set(['#bS','#bmS'],{strokeDasharray:1,strokeDashoffset:-1});
 lock(true);
 
 /* loader, then the hero entrance */
 const pc=$('#pc');const cnt={v:0};
 const intro=gsap.timeline({defaults:{ease:'power4.out'}});
-intro.from('#loader .mk span',{yPercent:110,rotate:8,stagger:.08,duration:.9})
- .from('#loader .sm span',{yPercent:110,duration:.7},'-=.5')
- .to(cnt,{v:100,duration:1.5,ease:'power2.inOut',onUpdate:()=>pc.textContent=Math.round(cnt.v)},0)
- .to('#loader .mk span',{yPercent:-110,stagger:.05,duration:.6,ease:'power3.in'},'+=.25')
+intro.from('#loader .mk span',{yPercent:110,rotate:8,stagger:.05,duration:.55})
+ .from('#loader .sm span',{yPercent:110,duration:.45},'-=.35')
+ .to(cnt,{v:100,duration:.8,ease:'power2.inOut',onUpdate:()=>pc.textContent=Math.round(cnt.v)},0)
+ .to('#loader .mk span',{yPercent:-110,stagger:.03,duration:.4,ease:'power3.in'},'+=.05')
  .to('#loader .sm span,#loader .pc',{opacity:0,duration:.3},'<')
- .to('#loader',{clipPath:'inset(0 0 100% 0)',duration:.9,ease:'power4.inOut'},'-=.15')
+ .to('#loader',{clipPath:'inset(0 0 100% 0)',duration:.6,ease:'power4.inOut'},'-=.1')
  .set('#loader',{display:'none'})
  .add(()=>lock(false),'<')
  .to('#hero h1 .ln span',{yPercent:0,stagger:.12,duration:1.1,onComplete:placeChips},'-=.55')
@@ -508,9 +499,9 @@ gsap.timeline({scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',s
  .to('.loop.L',{y:-180,rotate:-10,ease:'none'},0).to('.loop.R',{y:-240,ease:'none'},0)
  .to('.piece.a',{x:-60,ease:'none'},0).to('.piece.b',{x:60,ease:'none'},0);
 
-/* band: slides in from the side, then bends as you scroll past */
-gsap.to(['#bS','#bmS'],{strokeDashoffset:0,ease:'none',scrollTrigger:{trigger:'#band',start:'top 95%',end:'top 45%',scrub:true}});
-ScrollTrigger.create({trigger:'#band',start:'top bottom',end:'bottom top',scrub:true,onUpdate:s=>bandShape(s.progress)});
+/* band: swings in, then tilts the other way as you scroll past */
+gsap.fromTo('.bandIn',{xPercent:-30,rotate:-8},{xPercent:0,rotate:-4,ease:'none',scrollTrigger:{trigger:'#band',start:'top bottom',end:'top 40%',scrub:true}});
+gsap.to('.bandIn',{rotate:3,ease:'none',immediateRender:false,scrollTrigger:{trigger:'#band',start:'top 40%',end:'bottom top',scrub:true}});
 
 /* about: pinned, the paragraph fills word by word, tags pop in */
 ScrollTrigger.create({trigger:'#aboutPin',start:'top top',end:'+=170%',pin:true,scrub:true,
