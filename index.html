@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zeka — Mazen Mohamed, SEO Specialist</title>
-<meta name="description" content="مازن محمد، SEO Specialist بخبرة سنتين في متاجر مصر والسعودية، ونتايج حقيقية موثّقة.">
+<meta name="description" content="مازن محمد، SEO Specialist بخبرة سنتين في متاجر مصر والخليج، ونتايج حقيقية موثّقة.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Lalezar&family=Lilita+One&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;paddin
 :focus-visible{outline:3px solid var(--p);outline-offset:3px;border-radius:8px}
 .en{direction:ltr;font-family:var(--disp);text-transform:uppercase;letter-spacing:.005em}
 .wrap{width:min(1320px,100% - 40px);margin-inline:auto}
-.label{font:600 15px/1 var(--body);letter-spacing:.02em;direction:ltr;text-transform:uppercase}
+.label{font:400 clamp(20px,1.9vw,30px)/1 var(--disp);letter-spacing:.03em;direction:ltr;text-transform:uppercase}
 
 /* loader */
 #loader{position:fixed;inset:0;z-index:100;background:#fff;display:grid;place-content:center;text-align:center;direction:ltr}
@@ -38,7 +38,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;paddin
 .pillbtn:hover{background:var(--ink);color:#fff}
 #nav .l{display:flex;gap:8px}
 #logo{transition:opacity .4s,transform .5s var(--e);position:absolute;left:50%;transform:translateX(-50%);font:400 34px/1 var(--disp);color:var(--p);text-decoration:none;letter-spacing:.02em}
-#nav .r{display:flex;align-items:center;gap:28px}
+#nav .r{display:flex;align-items:center;gap:14px}#nav .meta{margin-inline-end:14px}#langBtn{min-width:56px;justify-content:center;font-weight:600}
 #nav .meta{font:500 14px/1.3 var(--body);text-align:left}
 #nav.scrolled #logo{opacity:0;pointer-events:none;transform:translateX(-50%) translateY(-14px)}
 .talk{direction:ltr;display:inline-flex;align-items:center;gap:12px;height:44px;padding:0 4px 0 22px;border-radius:999px;background:var(--ink);color:#fff;font:500 15px var(--body);position:relative;overflow:hidden}
@@ -179,7 +179,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;paddin
 #cat .breath{transform-origin:50% 100%;animation:br 3.2s ease-in-out infinite}@keyframes br{50%{transform:scaleY(1.05)}}
 #faqList{direction:rtl;display:flex;flex-direction:column;gap:14px;padding-top:6px}
 .q{display:flex;flex-direction:column;align-items:flex-start}
-.q button{display:block;width:100%;text-align:start;background:#e4d8ff;border:1.5px solid transparent;border-radius:999px;padding:clamp(18px,2.4vh,26px) clamp(22px,3vw,44px);font:500 clamp(18px,1.9vw,27px)/1.3 var(--body);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:background .35s,border-color .35s,border-radius .5s var(--e)}
+.q button{display:block;width:100%;text-align:start;background:#e4d8ff;border:1.5px solid transparent;border-radius:999px;padding:clamp(18px,2.4vh,26px) clamp(22px,3vw,44px);font:500 clamp(18px,1.9vw,27px)/1.3 var(--body);white-space:normal;transition:background .35s,border-color .35s,border-radius .5s var(--e)}
 .q button:hover{background:#d9c8ff}
 .q.open button{background:#f1e9ff;border-color:var(--p);border-radius:999px}
 .q .a{height:0;overflow:hidden;align-self:flex-end;width:min(100%,640px)}
@@ -224,6 +224,10 @@ footer .c{text-align:center;direction:rtl}footer .e{text-align:right}
 #caseBox .nums span{font-size:14px}
 #caseBox .last{margin-top:26px;font:400 clamp(24px,3vw,40px)/1.3 var(--ar)}
 
+html[lang=en] .sc{direction:ltr}html[lang=en] .sc span i{text-align:left}html[lang=en] .sv p{direction:ltr}
+html[lang=en] #faqList{direction:ltr}html[lang=en] footer .c{direction:ltr}html[lang=en] .card .nm span{text-align:left}
+html[lang=en] #caseBox .nums b{text-align:left}html[lang=en] #caseBox .xbtn{float:right}html[lang=en] #talkP .xbtn{left:auto;right:20px}
+html[lang=en] #para{font-family:var(--disp);line-height:1.12;max-width:17em}
 @media(max-width:900px){
  #grid{grid-template-columns:1fr}#tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
  #nav .meta{display:none}
@@ -257,7 +261,7 @@ footer .c{text-align:center;direction:rtl}footer .e{text-align:right}
 <header id="nav">
   <div class="l"><a class="pillbtn" href="#works">Work</a><a class="pillbtn" href="#about">About me</a><a class="pillbtn" href="cv.pdf" download="Mazen_Mohamed_SEO_Specialist_CV.pdf">CV</a></div>
   <a id="logo" href="#hero" aria-label="Zeka">ZEKA</a>
-  <div class="r"><div class="meta">SEO Specialist<br>Mansoura, Egypt</div>
+  <div class="r"><div class="meta">SEO Specialist<br>Mansoura, Egypt</div><button class="pillbtn" id="langBtn" type="button" aria-label="Switch to English">EN</button>
     <button class="talk" data-talk>Let's Talk <i><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2"><path d="M2 12 12 2M4 2h8v8"/></svg></i></button></div>
 </header>
 
@@ -288,7 +292,7 @@ footer .c{text-align:center;direction:rtl}footer .e{text-align:right}
   <div id="track">
     <div class="sc k1"><em>♛</em><b>2</b><span><i>Years in SEO</i>خبرة سنتين في المجال</span></div>
     <div class="sc k2"><em>♜</em><b>3</b><span><i>Companies</i>مجالات مختلفة</span></div>
-    <div class="sc k3"><em>♞</em><b>2</b><span><i>Markets</i>مصر والسعودية</span></div>
+    <div class="sc k3"><em>♞</em><b>2</b><span><i>Markets</i>مصر والخليج</span></div>
     <div class="sc k4"><em>♟</em><b>5</b><span><i>Platforms</i>WordPress · Shopify · Salla · Zid · OpenCart</span></div>
     <div class="sc k6"><img class="bxl" src="bx-symbol.svg" alt="Bankai X"><b>1</b><span><i>Brand from scratch</i>من الفكرة لحد الـ Launch</span></div>
     <div class="sc k1"><em>♛</em><b>22</b><span><i>Years old</i>وبطوّر نفسي باستمرار</span></div>
@@ -347,7 +351,7 @@ footer .c{text-align:center;direction:rtl}footer .e{text-align:right}
     </svg>
   </div>
   <div id="faqList">
-    <div class="q"><button aria-expanded="false"><span>بتشتغل على أنهي Markets؟</span></button><div class="a"><p>اشتغلت على متاجر في السوق المصري والسعودي. كل سوق ليه لغته وطريقة بحثه، وده بيأثر على اختيار الـ Keywords وكتابة الـ Content.</p></div></div>
+    <div class="q"><button aria-expanded="false"><span>بتشتغل على أنهي Markets؟</span></button><div class="a"><p>اشتغلت على متاجر في السوق المصري والخليجي. كل سوق ليه لغته وطريقة بحثه، وده بيأثر على اختيار الـ Keywords وكتابة الـ Content.</p></div></div>
     <div class="q"><button aria-expanded="false"><span>بتستخدم الـ AI في شغلك؟</span></button><div class="a"><p>أيوه. الـ AI بيساعدني في كتابة الـ Content، وأنا براجعه وبعدّل عليه، وبعدها بيترفع بالـ Optimization اللي حددته. والقرار النهائي بيكون ليّا.</p></div></div>
     <div class="q"><button aria-expanded="false"><span>بتشتغل على أنهي Platforms؟</span></button><div class="a"><p>WordPress وShopify وسلة وزد وOpenCart، وبنفّذ تعديلات الـ UI بنفسي على المنصات دي.</p></div></div>
     <div class="q"><button aria-expanded="false"><span>بتشتغل على الـ SEO بس، ولا الـ Content كمان؟</span></button><div class="a"><p>الاتنين. بشتغل على الـ Technical والـ On-Page والـ Off-Page والـ Local، وبكتب Articles وProduct Descriptions. وعندي كمان خبرة بسيطة في الـ UI وتطبيقه على زد وسلة ووردبريس.</p></div></div>
@@ -388,6 +392,11 @@ footer .c{text-align:center;direction:rtl}footer .e{text-align:right}
 {
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const CASES_EN=[
+ {img:'sper.webp',mv:'Move 1 · Opening',t:'Saudi fragrance store',lead:'Ahead of the Founding Day season',rows:[['The problem','A well-known brand, but Google only saw its homepage.'],['What I did','Fixed the indexing issues, opened the store pages up to Google, and resolved the technical issues before the season started.']],n:[['+797%','Clicks in 3 months, from 676 to 6,070'],['+356%','Impressions, from 8.9k to 40.6k'],['14.9%','CTR, up from 7.6%']],last:'We started from zero and beat the season target.'},
+ {img:'s28.webp',mv:'Move 2 · Middlegame',t:'The 28-day sprint',lead:'A site with impressions but weak performance',rows:[['What I did','Targeted every page sitting on page 2 of Google, worked on them with intensive on-page SEO, and backed them with supporting articles.']],n:[['+40.6%','Clicks, from 1,200 to 1,690'],['+54.6%','Impressions, from 73.9k to 114k'],['28','days']],last:'The result came from choosing the right pages and focusing on them.'},
+ {img:'sreb.webp',mv:'Move 3 · Endgame',t:'A full rebrand',lead:'A brand that changed its name after I started working on it',rows:[['The problem','8 of the 10 keywords the site ranked for were brand keywords using the old name. After optimization began, the client decided to change the name.'],['What I did','Updated the name across about 70 pages and focused content on new keywords to offset the coming drop.'],['The challenge','Losing about 60% of the keywords that drove traffic.']],n:[['+74%','Clicks in 3 months, from 3,100 to 5,380'],['+127%','Impressions, from 128k to 290k'],['5.8','Average position, up from 7.6']],last:'Despite the early loss, the site came back stronger than before.'},
+ {img:'sga.webp',mv:'Move 4 · Checkmate',t:'Electronics & gaming store',lead:'Gaming devices and laptops',rows:[['What I did','Tracked rising trends in gaming and tech, matched each trend to the right products, and targeted best-selling devices and parts, such as the RTX 3060.']],n:[['+240%','Organic revenue in 3 months'],['+171%','Organic sessions'],['+672%','Key events'],['53.6%','of store revenue is now organic']],last:'Organic became the store\'s largest revenue source.'}];
 const CASES=[
  {img:'sper.webp',mv:'Move 1 · Opening',t:'متجر عطور سعودي',lead:'قبل موسم يوم التأسيس',rows:[['المشكلة','البراند معروف، لكن جوجل كان شايف الـ Homepage بس.'],['عملت إيه','حليت مشاكل الـ Indexing وخليت صفحات المتجر متاحة لجوجل، وصلحت الـ Technical Issues قبل بداية الموسم.']],n:[['+797%','Clicks في 3 شهور، من 676 لـ 6,070'],['+356%','Impressions، من 8.9 ألف لـ 40.6 ألف'],['14.9%','CTR بعد ما كان 7.6%']],last:'بدأنا من الصفر، وحققنا أكتر من Target الموسم.'},
  {img:'s28.webp',mv:'Move 2 · Middlegame',t:'Sprint الـ 28 يوم',lead:'موقع ليه Impressions، لكن أداؤه ضعيف',rows:[['عملت إيه','استهدفت الصفحات اللي ترتيبها في Page 2 على جوجل، واشتغلت عليها On-Page بشكل مكثف، ودعمتها بمقالات مرتبطة بمحتواها.']],n:[['+40.6%','Clicks، من 1,200 لـ 1,690'],['+54.6%','Impressions، من 73.9 ألف لـ 114 ألف'],['28','يوم']],last:'النتيجة جت من اختيار الصفحات الصح والتركيز عليها.'},
@@ -396,8 +405,10 @@ const CASES=[
 
 /* split the about paragraph into words (words only, so Arabic letters stay joined) */
 const para=$('#para');const tags=[...para.querySelectorAll('.tag')];tags.forEach(t=>t.remove());
-para.innerHTML=para.textContent.trim().split(/[ \n\t]+/).map(w=>`<span class="w">${w}</span>`).join(' ');tags.forEach(t=>para.appendChild(t));
-const words=[...para.querySelectorAll('.w')];
+const PARA_AR=para.textContent.trim();let words=[];let wordsP=0;
+function setPara(txt){tags.forEach(t=>t.remove());para.innerHTML=txt.split(/[ \n\t]+/).map(w=>`<span class="w">${w}</span>`).join(' ');tags.forEach(t=>para.appendChild(t));words=[...para.querySelectorAll('.w')];paintWords(wordsP)}
+function paintWords(pr){wordsP=pr;if(pr<0){words.forEach(w=>w.classList.add('done'));return}const p=pr*1.08*words.length;words.forEach((w,i)=>{const k=p-i;w.classList.toggle('done',k>=3);w.classList.toggle('on',k>0&&k<3)})}
+setPara(PARA_AR);
 /* hero chips on phones: sit in the gaps between the headline's lines */
 function placeChips(){const ht=$('#heroT'),h1=$('#hero h1');const cs=[$('.chip.c1'),$('.chip.c3')];
  if(innerWidth>600){cs.forEach(c=>{c.style.top='';c.style.bottom=''});return}
@@ -414,10 +425,45 @@ addEventListener('resize',placeTags);addEventListener('load',placeTags);document
 const hasG=!!window.gsap;
 if(!hasG||RM){ /* no library or reduced motion: show everything, static */
   requestAnimationFrame(placeChips);
-  $('#loader').style.display='none';words.forEach(w=>w.classList.add('done'));tags.forEach(t=>t.style.scale=1);
+  $('#loader').style.display='none';paintWords(-1);tags.forEach(t=>t.style.scale=1);
 }
 let lenis=null;
 function lock(v){if(lenis){v?lenis.stop():lenis.start()}document.documentElement.style.overflow=v?'hidden':''}
+
+/* ---------- language switch (Arabic / English) ---------- */
+let LANG='ar';
+const PARA_EN="For two years I've worked in SEO with one goal: getting websites found by the people searching for them on Google. I've worked at 3 companies across different industries, and I handle the work from A to Z. I'm a Commerce graduate from Mansoura University, with some experience in UI and implementing it on Zid, Salla and WordPress.";
+const I18N=[
+ ['meta[name=description]',0,'Mazen Mohamed, SEO Specialist with two years of experience on stores in Egypt and the Gulf, with real, documented results.','content'],
+ ['#fig img',0,'Mazen Mohamed sitting on a chair, wearing a black hoodie and glasses','alt'],
+ ['.tag',0,'Planning the next move'],['.tag',1,'Decisions backed by data'],['.tag',2,'Attention to detail'],
+ ['#slider',0,'Quick numbers','aria-label'],
+ ['.sc span',0,'<i>Years in SEO</i>Two years of hands-on experience'],['.sc span',1,'<i>Companies</i>Different industries'],['.sc span',2,'<i>Markets</i>Egypt and the Gulf'],
+ ['.sc span',4,'<i>Brand from scratch</i>From concept to launch'],['.sc span',5,'<i>Years old</i>Always learning'],
+ ['#sNav span',0,'Drag or use the arrows'],['#sPrev',0,'Previous','aria-label'],['#sNext',0,'Next','aria-label'],
+ ['#bx p',0,'Bankai-X is my personal project. I handled the concept, logo, identity, UI and launch myself, and built the code with the help of AI.'],
+ ['#grid .card small',0,'Clicks in 3 months, from 676 to 6,070'],['#grid .card small',1,'Clicks in 28 days'],['#grid .card small',2,'Clicks, after losing 60% of keywords'],['#grid .card small',3,'Organic revenue in 3 months'],
+ ['#grid .card .nm b',0,'Saudi fragrance store'],['#grid .card .nm b',1,'The 28-day sprint'],['#grid .card .nm b',2,'A full rebrand'],['#grid .card .nm b',3,'Electronics & gaming store'],
+ ['#grid .shot img',0,'Search Console screenshot: clicks at 6.07k, up from 676, over 3 months','alt'],['#grid .shot img',1,'Search Console screenshot: clicks at 1.69k, up from 1.2k, over 28 days','alt'],['#grid .shot img',2,'Search Console screenshot: clicks at 5.38k, up from 3.1k, over 3 months','alt'],['#grid .shot img',3,'Google Analytics screenshot: organic search revenue up 240%','alt'],
+ ['#works .note',0,'Click any case study to see the details. Figures are from Google Search Console and Google Analytics 4; client names are withheld for privacy.'],
+ ['.sv p',0,'Making sure Google can reach and understand the site: crawling, indexing and speed.'],['.sv p',1,"Optimizing every page to answer the searcher's intent."],['.sv p',2,'Finding what people search for, and where competitors stand.'],['.sv p',3,'Articles and product descriptions written for readers first, then for Google.'],['.sv p',4,'Backlinks that build authority, plus cleaning up toxic links that hurt it.'],['.sv p',5,'Getting the site in front of local searchers in their city.'],['.sv p',6,'I build UI and edits myself on Salla, Zid, WordPress and Shopify.'],
+ ['.q button span',0,'Which markets do you work in?'],['.q .a p',0,"I've worked with stores in Egypt and the Gulf. Each market has its own language and search habits, which shape keyword choice and content."],
+ ['.q button span',1,'Do you use AI in your work?'],['.q .a p',1,'Yes. AI helps me write content; I review and edit it, and then it goes live with the optimizations I set. The final call is always mine.'],
+ ['.q button span',2,'Which platforms do you work on?'],['.q .a p',2,'WordPress, Shopify, Salla, Zid and OpenCart, and I implement UI changes on them myself.'],
+ ['.q button span',3,'Only SEO, or content too?'],['.q .a p',3,'Both. I work on technical, on-page, off-page and local SEO, and I write articles and product descriptions. I also have some experience in UI and implementing it on Zid, Salla and WordPress.'],
+ ['#end .sm',0,'Thanks for your time.'],['footer .c',0,'© 2026 Mazen Mohamed'],
+ ['#talkP',0,'Contact','aria-label'],['#talkP h2',0,"Got a project? <em>Let's talk.</em>"],
+ ['#talkP li a span:first-child',0,'WhatsApp'],['#talkP li a span:first-child',1,'Phone'],['#talkP li a span:first-child',2,'Email'],['#talkP li a span:first-child',3,'LinkedIn'],
+ ['#caseP',0,'Case study','aria-label']];
+I18N.forEach(r=>{const el=document.querySelectorAll(r[0])[r[1]];r.ar=el?(r[3]?el.getAttribute(r[3]):el.innerHTML):null});
+function setLang(l,save){LANG=l==='en'?'en':'ar';const en=LANG==='en';const H=document.documentElement;H.lang=LANG;H.dir=en?'ltr':'rtl';
+ I18N.forEach(r=>{const el=document.querySelectorAll(r[0])[r[1]];if(!el)return;const v=en?r[2]:r.ar;if(v==null)return;if(r[3])el.setAttribute(r[3],v);else el.innerHTML=v});
+ setPara(en?PARA_EN:PARA_AR);
+ const b=$('#langBtn');b.textContent=en?'عربي':'EN';b.lang=en?'ar':'en';b.setAttribute('aria-label',en?'التحويل للعربي':'Switch to English');
+ if(save){try{localStorage.setItem('zeka-lang',LANG)}catch(e){}try{const u=new URL(location.href);en?u.searchParams.set('lang','en'):u.searchParams.delete('lang');history.replaceState(null,'',u)}catch(e){}}
+ requestAnimationFrame(()=>{buildLine();placeTags();placeChips();window.ScrollTrigger&&ScrollTrigger.refresh()})}
+$('#langBtn').addEventListener('click',()=>setLang(LANG==='en'?'ar':'en',true));
+{let l=null;try{l=new URL(location.href).searchParams.get('lang')}catch(e){}if(!l){try{l=localStorage.getItem('zeka-lang')}catch(e){}}if(l==='en')setLang('en',false)}
 
 /* overlays */
 const talkP=$('#talkP'),caseP=$('#caseP'),box=$('#caseBox');let lastFocus=null;
@@ -426,7 +472,7 @@ function openTalk(e){lastFocus=document.activeElement;lock(true);talkP.style.vis
  talkP.querySelector('[data-close]').focus()}
 function closeTalk(){const done=()=>{talkP.style.visibility='hidden';lock(false);lastFocus&&lastFocus.focus()};
  if(hasG&&!RM)gsap.to(talkP,{clipPath:'circle(0% at calc(100% - 60px) 42px)',duration:.7,ease:'power3.inOut',onComplete:done});else done()}
-function openCase(i){const c=CASES[i];lastFocus=document.activeElement;
+function openCase(i){const c=(LANG==='en'?CASES_EN:CASES)[i];lastFocus=document.activeElement;
  box.innerHTML=`<button class="xbtn" data-close>Close</button><span class="mv">${c.mv}</span><h3>${c.t}</h3><p class="lead">${c.lead}</p><dl>${c.rows.map(r=>`<div><dt>${r[0]}</dt><dd>${r[1]}</dd></div>`).join('')}</dl><div class="nums">${c.n.map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div>${c.img?`<img class="cshot" src="${c.img}" alt="سكرين النتيجة">`:''}<p class="last">«${c.last}»</p>`;
  lock(true);caseP.style.visibility='visible';box.scrollTop=0;
  if(hasG&&!RM){gsap.to(caseP,{backgroundColor:'rgba(14,10,22,.55)',duration:.4});gsap.fromTo(box,{y:'100%'},{y:'0%',duration:.8,ease:'power4.out'});gsap.from('#caseBox .nums div',{y:30,opacity:0,stagger:.08,delay:.35,duration:.6})}else{caseP.style.background='rgba(14,10,22,.55)';box.style.transform='none'}
@@ -509,7 +555,7 @@ gsap.to('.bandIn',{rotate:3,ease:'none',immediateRender:false,scrollTrigger:{tri
 
 /* about: pinned, the paragraph fills word by word, tags pop in */
 ScrollTrigger.create({trigger:'#aboutPin',start:'top top',end:'+=170%',pin:true,scrub:true,
- onUpdate:s=>{const p=s.progress*1.08*words.length;words.forEach((w,i)=>{const k=p-i;w.classList.toggle('done',k>=3);w.classList.toggle('on',k>0&&k<3)});
+ onUpdate:s=>{paintWords(s.progress);
   tags.forEach((t,i)=>{const on=s.progress>[.3,.58,.84][i];if(on!==t._on){t._on=on;gsap.to(t,{scale:on?1:0,duration:.55,ease:on?'back.out(2.4)':'power2.in'})}})}});
 
 gsap.from('.sc',{y:80,opacity:0,stagger:.08,duration:.9,ease:'power4.out',scrollTrigger:{trigger:'#slider',start:'top 85%'}});
