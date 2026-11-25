@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zeka — Mazen Mohamed, SEO Specialist</title>
-<meta name="description" content="مازن محمد، SEO Specialist. شغل ونتايج حقيقية على متاجر في مصر والسعودية.">
+<meta name="description" content="مازن محمد، SEO Specialist بخبرة سنتين في متاجر مصر والسعودية، ونتايج حقيقية موثّقة.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Lalezar&family=Lilita+One&display=swap" rel="stylesheet">
@@ -55,9 +55,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;paddin
 .chip.c1{top:20%;left:27%;rotate:-7deg}.chip.c2{top:5%;left:50%;rotate:3deg}.chip.c3{top:78%;left:66%;rotate:-5deg}
 #heroT{position:relative}
 #fig{position:relative;z-index:2;margin-top:clamp(-40px,-2.5vw,-10px);width:min(38vw,470px);will-change:transform}
-#fig img{display:block;width:100%;height:auto}#fig .bf{position:absolute;inset:0;opacity:0}
-#fig .b1{animation:bo1 .45s steps(1) infinite}#fig .b2{animation:bo2 .45s steps(1) infinite}
-@keyframes bo1{0%{opacity:0}33%{opacity:1}66%{opacity:0}}@keyframes bo2{0%{opacity:0}66%{opacity:1}}
+#fig img{display:block;width:100%;height:auto}
 .loop{position:absolute;top:8%;width:clamp(180px,24vw,420px);height:auto;z-index:0;overflow:visible}
 .loop.L{left:-9vw}.loop.R{right:-9vw;transform:scaleX(-1)}
 .loop path{fill:none;stroke:var(--p);stroke-width:26;stroke-linecap:round}
@@ -69,7 +67,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;paddin
 
 /* band */
 #band{position:relative;margin-top:-6vw;z-index:4;direction:ltr;pointer-events:none;overflow-x:clip}
-#band{padding:5vw 0}.bandIn{background:var(--p);width:124%;margin-left:-12%;border-radius:999px;transform:rotate(-4deg);will-change:transform}
+#band{padding:5vw 0}.bandIn{background:var(--p);width:170%;margin-left:-35%;border-radius:999px;overflow:hidden;transform:rotate(-4deg);will-change:transform}
 .bandTrack{display:flex;width:max-content;animation:mq 26s linear infinite;will-change:transform}
 .bandTrack span{font:400 clamp(46px,6.4vw,104px)/1.25 var(--disp);color:#fff;white-space:nowrap;letter-spacing:.01em}
 @keyframes mq{to{transform:translateX(-50%)}}
@@ -86,7 +84,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;paddin
 /* stat slider */
 #slider{padding:clamp(40px,8vh,90px) 0;background:var(--bg2);direction:ltr}
 #track{display:flex;gap:18px;padding-inline:20px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;cursor:grab;scroll-padding-inline:20px}
-#track::-webkit-scrollbar{display:none}#track.drag{cursor:grabbing;scroll-snap-type:none}#track.drag *{user-select:none}
+#track::-webkit-scrollbar{display:none}#track.drag{cursor:grabbing;scroll-snap-type:none}#track{user-select:none;-webkit-user-select:none;touch-action:pan-x pan-y}#track img{-webkit-user-drag:none;pointer-events:none}
 .sc{flex:none;scroll-snap-align:start}
 #sNav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:22px;font:500 14px var(--body);direction:rtl}
 #sNav button{width:52px;height:52px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;transition:background .3s,transform .4s var(--e)}
@@ -153,7 +151,7 @@ button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;paddin
 .sv{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;direction:ltr;width:fit-content;max-width:100%}
 .sv:nth-child(odd){align-self:flex-start;align-items:flex-start;margin-left:6vw}
 .sv:nth-child(even){align-self:flex-end;align-items:flex-end;margin-right:6vw}
-.sv h3{font:400 clamp(40px,7.6vw,124px)/.9 var(--disp);color:var(--p);text-transform:uppercase;background:var(--bg);padding:.04em .12em;border-radius:.12em}
+.sv h3{font:400 clamp(40px,7.6vw,124px)/.9 var(--disp);color:var(--p);text-transform:uppercase}.sv h3 span{background:var(--bg);padding:.04em .12em;border-radius:.12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .sv p{direction:rtl;background:#fff;border:2px solid var(--p);color:var(--p);border-radius:999px;padding:.6em 1.4em;font:500 clamp(16px,1.6vw,24px)/1.5 var(--body);max-width:30em;rotate:-2deg}
 .sv:nth-child(even) p{rotate:2deg}
 
@@ -241,12 +239,12 @@ footer .c{text-align:center;direction:rtl}footer .e{text-align:right}
  #band{margin-top:-2vw}
  #grid,#tiles{grid-template-columns:1fr}.card .vis{aspect-ratio:.95}#bx{grid-template-columns:1fr;margin-inline:20px}#bx h3{text-align:left}
  .sv:nth-child(odd){margin-left:0}.sv:nth-child(even){margin-right:0}
- #svcLine path{stroke-width:10}.sv h3{background:none}
+ #svcLine path{stroke-width:10}
   .tag.t1{right:0}.tag.t2{left:0}.tag.t3{right:8%}.tag{font-size:11px;padding:.35em .9em}#para{line-height:1.5}
  #faq{grid-template-columns:1fr}.faqL{position:static}#cat{width:60%}.q button{white-space:normal;border-radius:28px}
  footer{grid-template-columns:1fr;text-align:center}footer .e,footer .c{text-align:center}footer nav{align-items:center}
 }
-@media(prefers-reduced-motion:reduce){#fig .bf{display:none}.piece .bob,.bandTrack{animation:none}}
+@media(prefers-reduced-motion:reduce){.piece .bob,.bandTrack{animation:none}}
 </style>
 </head>
 <body>
@@ -271,7 +269,7 @@ footer .c{text-align:center;direction:rtl}footer .e{text-align:right}
     <h1><span class="ln"><span>Page one,</span></span><span class="ln"><span>on purpose</span></span></h1>
     <span class="chip c1">SEO Specialist</span><span class="chip c3">Gamer</span>
   </div>
-  <div id="fig"><img class="bf b1" src="mazen1.webp" alt="" aria-hidden="true" width="560" height="873"><img class="bf b2" src="mazen2.webp" alt="" aria-hidden="true" width="560" height="873"><img src="mazen0.webp" width="560" height="873" fetchpriority="high" alt="مازن محمد قاعد على كرسي، بهودي أسود ونضارة"></div>
+  <div id="fig"><img src="mazen0.webp" width="560" height="873" fetchpriority="high" alt="مازن محمد قاعد على كرسي، بهودي أسود ونضارة"></div>
   <div class="piece a" aria-hidden="true"><svg viewBox="0 0 120 170"><g class="bob"><path d="M22 160h76l-8-22H30z" fill="#7b3cff"/><path d="M38 138c6-26 8-44 4-58h36c-4 14-2 32 4 58z" fill="#fff"/><circle cx="60" cy="48" r="26" fill="#7b3cff"/><path d="M34 80h52" /><g fill="none" stroke="#0e0a16" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 160h76l-8-22H30z"/><path d="M38 138c6-26 8-44 4-58h36c-4 14-2 32 4 58"/><circle cx="60" cy="48" r="26"/><path d="M32 80h56"/></g></g></svg></div>
   <div class="piece b" aria-hidden="true"><svg viewBox="0 0 130 180"><g class="bob" style="animation-delay:-.5s"><path d="M24 170h84l-8-22H32z" fill="#0e0a16"/><path d="M40 148c2-30 14-44 30-56-10 2-20 8-30 4-8-4-10-14-2-24l30-34 6-22 14 18c20 14 30 40 30 70 0 18-6 32-12 44z" fill="#7b3cff"/><g fill="none" stroke="#0e0a16" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 170h84l-8-22H32z"/><path d="M40 148c2-30 14-44 30-56-10 2-20 8-30 4-8-4-10-14-2-24l30-34 6-22 14 18c20 14 30 40 30 70 0 18-6 32-12 44"/><circle cx="76" cy="54" r="3.5" fill="#0e0a16"/><path d="M92 40c8 10 12 24 12 40"/></g></g></svg></div>
 </section>
@@ -281,54 +279,54 @@ footer .c{text-align:center;direction:rtl}footer .e{text-align:right}
 <section id="about">
   <div id="aboutPin">
     <div class="label">A bit about me</div>
-    <p id="para">بقالي سنتين شغلتي إن الناس تلاقي المتجر على جوجل. اشتغلت في 3 شركات وفي مجالات مختلفة، وبمسك الشغل من A to Z. خريج كلية تجارة جامعة المنصورة، وعندي خبرة بسيطة في الـ UI، وبطبّقه بنفسي على زد وسلة ووردبريس.
-      <span class="tag t1">بفكّر في النقلة الجاية</span><span class="tag t2">بشتغل بالأرقام مش بالتخمين</span><span class="tag t3">التفاصيل الصغيرة بتفرق</span></p>
+    <p id="para">بقالي سنتين بشتغل في الـ SEO، وهدفي إن الموقع يظهر للناس اللي بتدوّر عليه في جوجل. اشتغلت في 3 شركات وفي مجالات مختلفة، وبمسك الشغل من A to Z. خريج كلية تجارة جامعة المنصورة، وعندي خبرة بسيطة في الـ UI وتطبيقه على زد وسلة ووردبريس.
+      <span class="tag t1">بخطط للخطوة الجاية</span><span class="tag t2">قراراتي مبنية على الأرقام</span><span class="tag t3">بهتم بالتفاصيل</span></p>
   </div>
 </section>
 
 <section id="slider" aria-label="أرقام سريعة">
   <div id="track">
-    <div class="sc k1"><em>♛</em><b>2</b><span><i>Years in SEO</i>سنتين شغل كل يوم</span></div>
+    <div class="sc k1"><em>♛</em><b>2</b><span><i>Years in SEO</i>خبرة سنتين في المجال</span></div>
     <div class="sc k2"><em>♜</em><b>3</b><span><i>Companies</i>مجالات مختلفة</span></div>
     <div class="sc k3"><em>♞</em><b>2</b><span><i>Markets</i>مصر والسعودية</span></div>
     <div class="sc k4"><em>♟</em><b>5</b><span><i>Platforms</i>WordPress · Shopify · Salla · Zid · OpenCart</span></div>
     <div class="sc k6"><img class="bxl" src="bx-symbol.svg" alt="Bankai X"><b>1</b><span><i>Brand from scratch</i>من الفكرة لحد الـ Launch</span></div>
-    <div class="sc k1"><em>♛</em><b>22</b><span><i>Years old</i>ولسه بتعلم كل يوم</span></div>
+    <div class="sc k1"><em>♛</em><b>22</b><span><i>Years old</i>وبطوّر نفسي باستمرار</span></div>
   </div>
-  <div id="sNav"><button id="sPrev" aria-label="السابق"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 7H2M6 3 2 7l4 4"/></svg></button><span>اسحب أو دوس على السهم</span><button id="sNext" aria-label="التالي"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10M8 3l4 4-4 4"/></svg></button></div>
+  <div id="sNav"><button id="sPrev" aria-label="السابق"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 7H2M6 3 2 7l4 4"/></svg></button><span>اسحب أو استخدم الأسهم</span><button id="sNext" aria-label="التالي"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7h10M8 3l4 4-4 4"/></svg></button></div>
 </section>
 
 <section id="works">
   <div class="head"><div class="label">Work &amp; results</div><h2><span class="ln"><span>Selected</span></span><span class="ln"><span>moves</span></span></h2></div>
   <a id="bx" href="https://bankai-x.com" target="_blank" rel="noopener">
-    <div class="bxT"><span class="mv">Brand from scratch</span><h3><img src="bx-primary.svg" alt="Bankai X"></h3><p>ده مش Project لعميل، ده بتاعي. الـ Concept، والـ Logo، والـ Identity، والـ UI، والـ Launch: كله من عندي. والكود اتنفّذ بمساعدة الـ AI.</p>
+    <div class="bxT"><span class="mv">Brand from scratch</span><h3><img src="bx-primary.svg" alt="Bankai X"></h3><p>Bankai-X مشروعي الشخصي. اشتغلت بنفسي على الـ Concept والـ Logo والـ Identity والـ UI والـ Launch، ونفّذت الكود بمساعدة الـ AI.</p>
       <div class="bxP"><span>Concept</span><span>Logo</span><span>Identity</span><span>UI</span><span>Launch</span></div></div>
     <div class="bxR"><b>from<br>scratch</b><span class="bxGo">bankai-x.com <i><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2"><path d="M2 12 12 2M4 2h8v8"/></svg></i></span></div>
   </a>
   <div id="grid">
     <button class="card" data-case="0"><div class="vis v1"><span class="mv">Opening</span><div class="shot"><img src="sper.webp" alt="سكرين من Search Console: الكليكات 6.07 ألف بدل 676 في 3 شهور" loading="lazy"></div><div><div class="num" data-n="+797%">+797%</div><small>Clicks في 3 شهور، من 676 لـ 6,070</small></div></div>
       <div class="meta"><span class="ic">♟</span><span class="nm"><b>متجر عطور سعودي</b><span>Seasonal · Founding Day</span></span><span class="go"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2"><path d="M2 12 12 2M4 2h8v8"/></svg></span></div></button>
-    <button class="card dark" data-case="1"><div class="vis v2"><span class="mv">Middlegame</span><div class="shot"><img src="s28.webp" alt="سكرين من Search Console: الكليكات 1.69 ألف بدل 1.2 ألف في 28 يوم" loading="lazy"></div><div><div class="num" data-n="+40.6%">+40.6%</div><small>Clicks في 28 يوم بس</small></div></div>
+    <button class="card dark" data-case="1"><div class="vis v2"><span class="mv">Middlegame</span><div class="shot"><img src="s28.webp" alt="سكرين من Search Console: الكليكات 1.69 ألف بدل 1.2 ألف في 28 يوم" loading="lazy"></div><div><div class="num" data-n="+40.6%">+40.6%</div><small>Clicks في 28 يوم</small></div></div>
       <div class="meta"><span class="ic">♞</span><span class="nm"><b>Sprint الـ 28 يوم</b><span>On-page · Content</span></span><span class="go"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2"><path d="M2 12 12 2M4 2h8v8"/></svg></span></div></button>
     <button class="card" data-case="2"><div class="vis v3"><span class="mv">Endgame</span><div class="shot"><img src="sreb.webp" alt="سكرين من Search Console: الكليكات 5.38 ألف بدل 3.1 ألف في 3 شهور" loading="lazy"></div><div><div class="num" data-n="+74%">+74%</div><small>Clicks، بعد خسارة 60% من الـ Keywords</small></div></div>
       <div class="meta"><span class="ic">♛</span><span class="nm"><b>Rebranding كامل</b><span>Rebrand · Recovery</span></span><span class="go"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2"><path d="M2 12 12 2M4 2h8v8"/></svg></span></div></button>
     <button class="card lite" data-case="3"><div class="vis v4"><span class="mv">Checkmate</span><div class="shot"><img src="sga.webp" alt="سكرين من Google Analytics: إيرادات السيرش الأورجانيك زادت 240%" loading="lazy"></div><div><div class="num" data-n="+240%">+240%</div><small>Organic Revenue في 3 شهور</small></div></div>
       <div class="meta"><span class="ic">♛</span><span class="nm"><b>متجر إلكترونيات وجيمينج</b><span>E-commerce · Revenue</span></span><span class="go"><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2"><path d="M2 12 12 2M4 2h8v8"/></svg></span></div></button>
   </div>
-  <p class="note">دوس على أي Case عشان تشوف عملت إيه بالظبط. الأرقام من Google Search Console وGoogle Analytics 4، وأسامي العملاء مش مكتوبة احترامًا لخصوصيتهم.</p>
+  <p class="note">اضغط على أي Case Study عشان تشوف التفاصيل. الأرقام من Google Search Console وGoogle Analytics 4، وأسامي العملاء مش مذكورة حفاظًا على خصوصيتهم.</p>
 </section>
 
 <section id="svc">
   <div class="head"><div class="label">Services</div><h2><span class="ln"><span>What I</span></span><span class="ln"><span>actually do</span></span></h2></div>
   <div id="svcList">
     <svg id="svcLine" aria-hidden="true"><path pathLength="1" d=""/></svg>
-    <div class="sv"><h3>Technical SEO</h3><p>بخلّي جوجل يشوف الموقع صح: Crawling، وIndexing، وSpeed.</p></div>
-    <div class="sv"><h3>On‑Page SEO</h3><p>بظبط كل صفحة عشان تجاوب على الـ Search Intent قبل ما اللي بيدوّر يكمّل سؤاله.</p></div>
-    <div class="sv"><h3>Keyword Research</h3><p>بعرف الناس بتكتب إيه في الـ Search، والـ Competitors واقفين فين منه.</p></div>
-    <div class="sv"><h3>SEO Content</h3><p>Articles وProduct Descriptions بيتكتبوا للقارئ الأول، وبعدين لجوجل.</p></div>
-    <div class="sv"><h3>Off‑Page SEO</h3><p>Backlinks بتبني الـ Authority، وبنضّف الـ Toxic Links اللي بتهدّها.</p></div>
-    <div class="sv"><h3>Local SEO</h3><p>بخلّي المتجر يظهر في الـ Local Search للي بيدوّر عليه في مدينته.</p></div>
-    <div class="sv"><h3>Store UI</h3><p>بنفّذ الـ UI والتعديلات بإيدي على Salla وZid وWordPress وShopify.</p></div>
+    <div class="sv"><h3><span>Technical SEO</span></h3><p>بتأكد إن جوجل يقدر يوصل للموقع ويفهمه: Crawling وIndexing وSpeed.</p></div>
+    <div class="sv"><h3><span>On‑Page SEO</span></h3><p>بظبط كل صفحة عشان تجاوب على الـ Search Intent بتاع اللي بيدوّر.</p></div>
+    <div class="sv"><h3><span>Keyword Research</span></h3><p>بحدد الناس بتدوّر بإيه في الـ Search، والـ Competitors واقفين فين منه.</p></div>
+    <div class="sv"><h3><span>SEO Content</span></h3><p>Articles وProduct Descriptions مكتوبة للقارئ الأول، وبعد كده لجوجل.</p></div>
+    <div class="sv"><h3><span>Off‑Page SEO</span></h3><p>Backlinks بتبني الـ Authority، مع تنضيف الـ Toxic Links اللي بتأثر عليها.</p></div>
+    <div class="sv"><h3><span>Local SEO</span></h3><p>بخلّي الموقع يظهر في الـ Local Search للناس اللي بتدوّر عليه في مدينتها.</p></div>
+    <div class="sv"><h3><span>Store UI</span></h3><p>بنفّذ الـ UI والتعديلات بنفسي على Salla وZid وWordPress وShopify.</p></div>
   </div>
 </section>
 
@@ -349,15 +347,15 @@ footer .c{text-align:center;direction:rtl}footer .e{text-align:right}
     </svg>
   </div>
   <div id="faqList">
-    <div class="q"><button aria-expanded="false"><span>بتشتغل على Markets إيه؟</span></button><div class="a"><p>اشتغلت على متاجر في السوق المصري والسعودي. كل Market ليه لغته وطريقة بحثه، وده بيفرق في الـ Keywords وفي الـ Content.</p></div></div>
-    <div class="q"><button aria-expanded="false"><span>بتستخدم الـ AI في شغلك؟</span></button><div class="a"><p>أيوه. الـ AI بيساعدني في كتابة الـ Content، وأنا براجعه وبعدّله، وبعدين بيترفع بالـ Optimization اللي أنا حددته. القرار في الآخر بتاعي.</p></div></div>
-    <div class="q"><button aria-expanded="false"><span>بتشتغل على Platforms إيه؟</span></button><div class="a"><p>WordPress وShopify وسلة وزد وOpenCart. وبنفّذ تعديلات الـ UI بإيدي على الـ Platforms دي.</p></div></div>
-    <div class="q"><button aria-expanded="false"><span>بتعمل SEO بس، ولا Content كمان؟</span></button><div class="a"><p>الاتنين. بشتغل Technical وOn-Page وOff-Page وLocal، وبكتب Articles وProduct Descriptions. وعندي كمان خبرة بسيطة في الـ UI، وبطبّقه بنفسي على زد وسلة ووردبريس.</p></div></div>
+    <div class="q"><button aria-expanded="false"><span>بتشتغل على أنهي Markets؟</span></button><div class="a"><p>اشتغلت على متاجر في السوق المصري والسعودي. كل سوق ليه لغته وطريقة بحثه، وده بيأثر على اختيار الـ Keywords وكتابة الـ Content.</p></div></div>
+    <div class="q"><button aria-expanded="false"><span>بتستخدم الـ AI في شغلك؟</span></button><div class="a"><p>أيوه. الـ AI بيساعدني في كتابة الـ Content، وأنا براجعه وبعدّل عليه، وبعدها بيترفع بالـ Optimization اللي حددته. والقرار النهائي بيكون ليّا.</p></div></div>
+    <div class="q"><button aria-expanded="false"><span>بتشتغل على أنهي Platforms؟</span></button><div class="a"><p>WordPress وShopify وسلة وزد وOpenCart، وبنفّذ تعديلات الـ UI بنفسي على المنصات دي.</p></div></div>
+    <div class="q"><button aria-expanded="false"><span>بتشتغل على الـ SEO بس، ولا الـ Content كمان؟</span></button><div class="a"><p>الاتنين. بشتغل على الـ Technical والـ On-Page والـ Off-Page والـ Local، وبكتب Articles وProduct Descriptions. وعندي كمان خبرة بسيطة في الـ UI وتطبيقه على زد وسلة ووردبريس.</p></div></div>
   </div>
 </section>
 
 <section id="end">
-  <p class="sm">كفاية سكرول كده.</p>
+  <p class="sm">شكرًا لوقتك.</p>
   <h2><span class="ln"><span>Your</span></span><span class="ln"><span>move.</span></span></h2>
   <button class="talk" data-talk>Let's Talk <i><svg viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2"><path d="M2 12 12 2M4 2h8v8"/></svg></i></button>
   <a class="mail" href="mailto:Mazeneg22@gmail.com">Mazeneg22@gmail.com</a>
@@ -372,7 +370,7 @@ footer .c{text-align:center;direction:rtl}footer .e{text-align:right}
 
 <div id="talkP" role="dialog" aria-modal="true" aria-label="تواصل" data-lenis-prevent>
   <button class="xbtn" data-close>Close</button>
-  <h2>عندك مشروع؟ <em>كلّمني.</em></h2>
+  <h2>عندك مشروع؟ <em>يسعدني نتكلم.</em></h2>
   <ul>
     <li><a href="https://wa.me/201554318585" target="_blank" rel="noopener"><span>واتساب</span><span>01554318585</span></a></li>
     <li><a href="tel:+201013466692"><span>موبايل</span><span>01013466692</span></a></li>
@@ -391,10 +389,10 @@ footer .c{text-align:center;direction:rtl}footer .e{text-align:right}
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const CASES=[
- {img:'sper.webp',mv:'Move 1 · Opening',t:'متجر عطور سعودي',lead:'قبل Season يوم التأسيس',rows:[['المشكلة','البراند معروف، بس جوجل مش شايف منه غير الـ Homepage.'],['عملت إيه','حليت مشاكل الـ Indexing وفتحت صفحات المتجر لجوجل، وصلّحت الـ Technical Issues قبل ما الـ Season يبدأ.']],n:[['+797%','Clicks في 3 شهور، من 676 لـ 6,070'],['+356%','Impressions، من 8.9 ألف لـ 40.6 ألف'],['14.9%','CTR بعد ما كان 7.6%']],last:'بدأنا من رقعة فاضية، وعدّينا Target الـ Season.'},
- {img:'s28.webp',mv:'Move 2 · Middlegame',t:'Sprint الـ 28 يوم',lead:'موقع ليه Impressions، بس ضعيفة',rows:[['عملت إيه','استهدفت كل صفحة واقفة في Page 2 على جوجل، واشتغلت عليها On-Page مكثف، ودعمتها بمقالات بتخدم الـ Content بتاعها.']],n:[['+40.6%','Clicks، من 1,200 لـ 1,690'],['+54.6%','Impressions، من 73.9 ألف لـ 114 ألف'],['28','يوم بس']],last:'في الـ Middlegame مفيش وقت تفكر كتير. فيه وقت للنقلة الصح بس.'},
- {img:'sreb.webp',mv:'Move 3 · Endgame',t:'Rebranding كامل',lead:'براند غيّر اسمه بعد ما بدأت أشتغل عليه',rows:[['المشكلة','8 من أهم 10 Keywords بيظهر بيها الموقع كانت Brand Keywords بالاسم القديم. وبعد ما بدأت الـ Optimization، العميل قرر يغيّر الاسم.'],['عملت إيه','غيّرت الاسم في حوالي 70 صفحة، وكثّفت الـ Content على Keywords جديدة عشان أعوّض الـ Drop اللي جاي.'],['التمن','خسرنا حوالي 60% من الـ Keywords اللي كانت بتجيب الـ Traffic.']],n:[['+74%','Clicks في 3 شهور، من 3,100 لـ 5,380'],['+127%','Impressions، من 128 ألف لـ 290 ألف'],['5.8','Average Position بعد ما كان 7.6']],last:'خسرت القطع… وكسبت الدور.'},
- {img:'sga.webp',mv:'Move 4 · Checkmate',t:'متجر إلكترونيات وجيمينج',lead:'أجهزة Gaming ولابتوبات',rows:[['عملت إيه','تابعت الـ Trends اللي طالعة في الـ Gaming والـ Tech، وربطت كل Trend بالمنتجات اللي تناسبه. واستهدفت الـ Best Sellers من الأجهزة والقطع، زي كارت RTX 3060.']],n:[['+240%','Organic Revenue في 3 شهور'],['+171%','Organic Sessions'],['+672%','Key Events'],['53.6%','من Revenue المتجر بقت Organic']],last:'في الآخر، مفيش غير حاجة واحدة بتتحسب: مين كسب.'}];
+ {img:'sper.webp',mv:'Move 1 · Opening',t:'متجر عطور سعودي',lead:'قبل موسم يوم التأسيس',rows:[['المشكلة','البراند معروف، لكن جوجل كان شايف الـ Homepage بس.'],['عملت إيه','حليت مشاكل الـ Indexing وخليت صفحات المتجر متاحة لجوجل، وصلحت الـ Technical Issues قبل بداية الموسم.']],n:[['+797%','Clicks في 3 شهور، من 676 لـ 6,070'],['+356%','Impressions، من 8.9 ألف لـ 40.6 ألف'],['14.9%','CTR بعد ما كان 7.6%']],last:'بدأنا من الصفر، وحققنا أكتر من Target الموسم.'},
+ {img:'s28.webp',mv:'Move 2 · Middlegame',t:'Sprint الـ 28 يوم',lead:'موقع ليه Impressions، لكن أداؤه ضعيف',rows:[['عملت إيه','استهدفت الصفحات اللي ترتيبها في Page 2 على جوجل، واشتغلت عليها On-Page بشكل مكثف، ودعمتها بمقالات مرتبطة بمحتواها.']],n:[['+40.6%','Clicks، من 1,200 لـ 1,690'],['+54.6%','Impressions، من 73.9 ألف لـ 114 ألف'],['28','يوم']],last:'النتيجة جت من اختيار الصفحات الصح والتركيز عليها.'},
+ {img:'sreb.webp',mv:'Move 3 · Endgame',t:'Rebranding كامل',lead:'براند غيّر اسمه بعد ما بدأت أشتغل عليه',rows:[['المشكلة','8 من أهم 10 Keywords بيظهر بيها الموقع كانت Brand Keywords بالاسم القديم. وبعد ما بدأت الـ Optimization، العميل قرر يغيّر الاسم.'],['عملت إيه','غيّرت الاسم في حوالي 70 صفحة، وكثّفت الـ Content على Keywords جديدة عشان أعوّض الـ Drop اللي جاي.'],['التحدي','خسارة حوالي 60% من الـ Keywords اللي كانت بتجيب الـ Traffic.']],n:[['+74%','Clicks في 3 شهور، من 3,100 لـ 5,380'],['+127%','Impressions، من 128 ألف لـ 290 ألف'],['5.8','Average Position بعد ما كان 7.6']],last:'رغم الخسارة في الأول، الموقع رجع أقوى من الأول.'},
+ {img:'sga.webp',mv:'Move 4 · Checkmate',t:'متجر إلكترونيات وجيمينج',lead:'أجهزة Gaming ولابتوبات',rows:[['عملت إيه','تابعت الـ Trends اللي طالعة في الـ Gaming والـ Tech، وربطت كل Trend بالمنتجات اللي تناسبه. واستهدفت الـ Best Sellers من الأجهزة والقطع، زي كارت RTX 3060.']],n:[['+240%','Organic Revenue في 3 شهور'],['+171%','Organic Sessions'],['+672%','Key Events'],['53.6%','من Revenue المتجر بقت Organic']],last:'الـ Organic بقى أكبر مصدر لإيرادات المتجر.'}];
 
 /* split the about paragraph into words (words only, so Arabic letters stay joined) */
 const para=$('#para');const tags=[...para.querySelectorAll('.tag')];tags.forEach(t=>t.remove());
@@ -439,12 +437,18 @@ document.addEventListener('click',e=>{const t=e.target.closest('[data-talk],[dat
  if(t.hasAttribute('data-talk'))openTalk();else if(t.hasAttribute('data-case'))openCase(+t.dataset.case);else if(t.closest('#talkP'))closeTalk();else closeCase()});
 addEventListener('keydown',e=>{if(e.key==='Escape'){if(caseP.style.visibility==='visible')closeCase();else if(talkP.style.visibility==='visible')closeTalk()}});
 
-/* stat slider: drag + arrows */
-{const tr=$('#track');let down=false,sx=0,sl=0,moved=false;
- tr.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;moved=false;sx=e.clientX;sl=tr.scrollLeft});
- addEventListener('pointermove',e=>{if(!down)return;const d=e.clientX-sx;if(Math.abs(d)>4){moved=true;tr.classList.add('drag')}tr.scrollLeft=sl-d});
- addEventListener('pointerup',()=>{down=false;tr.classList.remove('drag')});
- const step=d=>tr.scrollBy({left:d*(tr.querySelector('.sc').offsetWidth+18),behavior:'smooth'});
+/* stat slider: drag with the mouse (with a throw), swipe on touch, or use the arrows */
+{const tr=$('#track');tr.querySelectorAll('img').forEach(i=>i.draggable=false);
+ const cardW=()=>tr.querySelector('.sc').offsetWidth+18;
+ const maxL=()=>tr.scrollWidth-tr.clientWidth;
+ const snapTo=x=>{const w=cardW();const t=Math.max(0,Math.min(maxL(),Math.round(x/w)*w));tr.scrollTo({left:t,behavior:'smooth'});clearTimeout(tr._r);tr._r=setTimeout(()=>tr.classList.remove('drag'),700)};
+ let down=false,sx=0,sl=0,lx=0,lt=0,v=0,moved=false;
+ tr.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.button!==0)return;e.preventDefault();down=true;moved=false;sx=lx=e.clientX;lt=performance.now();sl=tr.scrollLeft;v=0;tr.classList.add('drag');tr.setPointerCapture(e.pointerId)});
+ tr.addEventListener('pointermove',e=>{if(!down)return;const now=performance.now(),dt=Math.max(1,now-lt);v=.8*v+.2*((e.clientX-lx)/dt);lx=e.clientX;lt=now;const d=e.clientX-sx;if(Math.abs(d)>3)moved=true;tr.scrollLeft=sl-d});
+ const up=e=>{if(!down)return;down=false;try{tr.releasePointerCapture(e.pointerId)}catch(_){}snapTo(tr.scrollLeft-v*260)};
+ tr.addEventListener('pointerup',up);tr.addEventListener('pointercancel',up);
+ tr.addEventListener('click',e=>{if(moved){e.preventDefault();e.stopPropagation()}},true);
+ const step=d=>{tr.classList.add('drag');snapTo(tr.scrollLeft+d*cardW())};
  $('#sPrev').onclick=()=>step(-1);$('#sNext').onclick=()=>step(1)}
 /* faq */
 function setQ(q,open){const b=q.querySelector('button'),a=q.querySelector('.a'),bub=a.querySelector('p');q.classList.toggle('open',open);b.setAttribute('aria-expanded',open);
@@ -500,7 +504,7 @@ gsap.timeline({scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',s
  .to('.piece.a',{x:-60,ease:'none'},0).to('.piece.b',{x:60,ease:'none'},0);
 
 /* band: swings in, then tilts the other way as you scroll past */
-gsap.fromTo('.bandIn',{xPercent:-30,rotate:-8},{xPercent:0,rotate:-4,ease:'none',scrollTrigger:{trigger:'#band',start:'top bottom',end:'top 40%',scrub:true}});
+gsap.fromTo('.bandIn',{xPercent:-12,rotate:-8},{xPercent:0,rotate:-4,ease:'none',scrollTrigger:{trigger:'#band',start:'top bottom',end:'top 40%',scrub:true}});
 gsap.to('.bandIn',{rotate:3,ease:'none',immediateRender:false,scrollTrigger:{trigger:'#band',start:'top 40%',end:'bottom top',scrub:true}});
 
 /* about: pinned, the paragraph fills word by word, tags pop in */
